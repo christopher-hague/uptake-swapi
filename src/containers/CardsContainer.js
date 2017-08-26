@@ -4,7 +4,7 @@ import FilmInfo from '../components/FilmInfo'
 
 const CardsContainer = ({films}) => {
   const filmCards = films.map((film, i) =>
-    <div className="column" key={i} overflow="hidden">
+    <div className="column" key={i}>
       <div className="ui one column grid">
         <FilmInfo film={film} />
       </div>
