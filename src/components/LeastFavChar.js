@@ -1,11 +1,16 @@
 import React from 'react'
 
-const LeastFavChar = ({leastFavChar}) => {
+const LeastFavChar = ({name, gender, films, homeworld}) => {
 
   return (
-    <div className='ui segment'>
+    <div className="Least-Fav-Char">
       <h1>Least Favorite Character</h1>
-      <li>{leastFavChar.name}</li>
+      <h3>{name}</h3>
+      <ul>
+        <li>Gender: {gender}</li>
+        <li>Homeworld: {homeworld}</li>
+        <li>Films: {films}</li>
+      </ul>
     </div>
   )
 }

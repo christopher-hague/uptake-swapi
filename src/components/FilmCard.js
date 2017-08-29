@@ -1,12 +1,13 @@
 import React from 'react'
+import FilmInfo from './FilmInfo'
 
-const FilmCard = ({films}) => {
+const FilmCard = () => {
+  const promo = "https://images-na.ssl-images-amazon.com/images/I/81P3lDJbjCL._SY550_.jpg"
 
   return (
-    <div>
-      <div className="ui segment">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqTeYpkPPNMufbwBZC-nYS2FCSA_lOJ0uf72u0iYBcQKdISCvhsuOzzXER"></img>
-      </div>
+    <div className="Film-Card">
+      <FilmInfo />
+      <FilmInfo />
     </div>
   )
 }

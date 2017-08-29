@@ -10,8 +10,19 @@ class App extends Component {
     this.state = {
       favChar: null,
       leastFavChar: null,
-      films: null
+      films: null,
+      planets: null
     }
+  }
+
+  fetchPlanets() {
+    return fetch("https://swapi.co/api/planets/")
+    .then( res => res.json() )
+    .then( json => {
+      this.setState({
+        planets: json
+      })
+    })
   }
 
   fetchPalpatine() {
@@ -34,7 +45,7 @@ class App extends Component {
     })
   }
 
-  fetchFilms() {
+  fetchAllFilms() {
     return fetch("https://swapi.co/api/films/")
     .then( res => res.json() )
     .then ( json => {
@@ -49,27 +60,34 @@ class App extends Component {
   componentDidMount() {
     this.fetchPalpatine()
     this.fetchJarJar()
-    this.fetchFilms()
+    this.fetchAllFilms()
+    this.fetchPlanets()
+  }
+
+  capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1)
+  }
+
+  getCharHomeworld(char) {
+    return
   }
 
   render() {
     console.log(this.state)
-    if(!this.state.favChar || !this.state.leastFavChar || !this.state.films) {
+
+    if(!this.state.favChar || !this.state.leastFavChar || !this.state.films || !this.state.planets) {
       return null
     } else {
-      return (
-        <div className="ui grid container">
-          <div className="four wide column">
-            <MiscContainer
-              favChar={this.state.favChar}
-              leastFavChar={this.state.leastFavChar}
-            />
-            <div>misc other stuff</div>
-          </div>
 
-          <div className="twelve wide column">
-            <CardsContainer films={this.state.films} />
-          </div>
+      return (
+        <div>
+          <MiscContainer
+            favChar={this.state.favChar}
+            leastFavChar={this.state.leastFavChar}
+            films={this.state.films}
+            planets={this.state.planets}
+          />
+          <CardsContainer />
         </div>
       );
     }
@@ -77,3 +95,17 @@ class App extends Component {
 }
 
 export default App;
+
+// <div className="ui grid container">
+//   <div className="four wide column">
+//     <MiscContainer
+//       favChar={this.state.favChar}
+//       leastFavChar={this.state.leastFavChar}
+//     />
+//     <div>misc other stuff</div>
+//   </div>
+//
+//   <div className="twelve wide column">
+//     <CardsContainer films={this.state.films} />
+//   </div>
+// </div>
