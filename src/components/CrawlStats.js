@@ -11,7 +11,6 @@ class CrawlStats extends React.Component {
   }
 
   render() {
-    const crawlParagraphs = this.state.films.map(film => ({episode: film.episode_id, paragraphs: film.opening_crawl.split("\r\n\r")}))
     const crawlData = this.state.films.map(film => ({episode: film.episode_id, words: film.opening_crawl.split("\n").join(" ").split(" ")}))
     const crawlWords = crawlData.map(film => ({episode: film.episode, words: film.words.filter(word => word !== "\r").length} ))
 

@@ -5,7 +5,7 @@ body {
 }
 
 .Misc-Container {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   width: 25%;
   height: 670px;
   margin: 10px 10px 10px 10px;
@@ -14,7 +14,7 @@ body {
 }
 
 .Cards-Container {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   width: 75%;
   height: 670px;
   display: table-cell;
@@ -69,10 +69,34 @@ body {
 
 div.poster {
   margin: 5px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   float: left;
   width: 180px;
   height: px;
+}
+
+div.poster ul li {
+  font-size: 80%;
+}
+
+div.card {
+  float: left;
+}
+
+div.left-card {
+  float: right;
+  position: relative;
+  margin-right: 20px;
+  margin-left: -5px
+}
+
+
+
+div.right-card {
+  float: right;
+  /*position: relative;*/
+  margin-left: 20px;
+  margin-right: -5px;
 }
 
 div.poster-info h3 {

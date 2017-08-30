@@ -32,14 +32,27 @@ class CardsContainer extends React.Component {
     .sort( (a,b) => a.episode_id - b.episode_id )
   }
 
+  makePairs() {
+    var allCardsInfo = this.allCardInfo()
+    var cardPairs = []
+    for(let i = 0; i < 7; i += 2) {
+      cardPairs.push([allCardsInfo[i], allCardsInfo[i + 1]])
+    }
+    return cardPairs
+  }
+
   render() {
-    const filmCards = this.allCardInfo().map((info) =>
-      <FilmCard key={info.title} cardInfo={info} />
+    // pass a filmcard with information about two movies
+
+    const testFilmCards = this.makePairs().map((pair, i) =>
+      <FilmCard key={i + 1} leftCardInfo={pair[0]} rightCardInfo={pair[1]} />
     )
+    
+    console.log("filmCards: ", testFilmCards)
 
     return (
       <div className="Cards-Container">
-        {filmCards}
+        {testFilmCards}
       </div>
     )
   }
