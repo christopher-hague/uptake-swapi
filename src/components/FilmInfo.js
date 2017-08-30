@@ -1,11 +1,10 @@
 import React from 'react'
 
-const FilmInfo = ({film}) => {
-
+const FilmInfo = () => {
 
   return (
     <div className="Film-Info">
-      <p>Testing</p>
+
     </div>
   )
 }

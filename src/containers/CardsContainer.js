@@ -2,19 +2,50 @@ import React from 'react'
 import FilmCard from '../components/FilmCard'
 import FilmInfo from '../components/FilmInfo'
 
-const CardsContainer = () => {
+class CardsContainer extends React.Component {
+  constructor(props) {
+    super(props)
 
-  return (
-    <div className="Cards-Container">
-      <FilmCard />
+    this.state = {
+      films: this.props.films,
+      characters: this.props.characters
+    }
+  }
 
-      <FilmCard />
+  charNamesURLs() {
+    return this.state.characters.map(char => ({name: char.name, url: char.url}))
+  }
 
-      <FilmCard />
+  // gets main characters from film passed
+  getMainCharacters(film) {
+    var mainCharactersURLs = film.characters.slice(0, 3)
+    return this.state.characters.filter(char => mainCharactersURLs.includes(char.url))
+  }
 
-      <FilmCard />
-    </div>
-  )
+  allCardInfo() {
+    return this.state.films.map(film => (
+      {
+        title: film.title,
+        director: film.director,
+        main_chars:this.getMainCharacters(film),
+        episode_id: film.episode_id}
+    ))
+    .sort( (a,b) => a.episode_id - b.episode_id )
+  }
+
+  render() {
+    console.log("CardsCont state: ",this.state)
+    console.log("AllCardInfo: ", this.allCardInfo())
+    const filmCards = this.allCardInfo().map(info =>
+      <FilmCard key={info.title} cardInfo={info} />
+    )
+
+    return (
+      <div className="Cards-Container">
+        {filmCards}
+      </div>
+    )
+  }
 }
 
 export default CardsContainer

@@ -1,13 +1,33 @@
 import React from 'react'
-import FilmInfo from './FilmInfo'
 
-const FilmCard = () => {
+const FilmCard = ({cardInfo}) => {
   const promo = "https://images-na.ssl-images-amazon.com/images/I/81P3lDJbjCL._SY550_.jpg"
+  // style="float: right;"
+
+  const mainChars = cardInfo.main_chars.map(char =>
+    char.name
+  ).join(", ")
+
+  const romanNums = {
+    1: "I",
+    2: "II",
+    3: "III",
+    4: "IV",
+    5: "V",
+    6: "VI",
+    7: "VII"
+  }
 
   return (
     <div className="Film-Card">
-      <FilmInfo />
-      <FilmInfo />
+      <img alt={cardInfo.episode_id} src={promo} />
+      <h1>Episode {romanNums[cardInfo.episode_id]}: {cardInfo.title}</h1>
+      <div>
+        <ul>
+          <li>Director: {cardInfo.director}</li>
+          <li>Main Characters: {mainChars}</li>
+        </ul>
+      </div>
     </div>
   )
 }

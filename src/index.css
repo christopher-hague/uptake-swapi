@@ -27,20 +27,13 @@ body {
   transform:scale(0.9);
 }
 
-.Film-Card {
+/*.Film-Card {
   border: 1px solid purple;
   height: 50%;
   width: 50%;
   display: inline-block;
   vertical-align: bottom;
-  /*background: linear-gradient(to right,
-                              transparent 0%,
-                              transparent calc(50% - 0.81px),
-                              black calc(50% - 0.8px),
-                              black calc(50% + 0.8px),
-                              transparent calc(50% + 0.81px),
-                              transparent 100%);*/
-}
+}*/
 
 .Fav-Char {
   /*border: 1px solid red;*/

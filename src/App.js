@@ -11,7 +11,8 @@ class App extends Component {
       favChar: null,
       leastFavChar: null,
       films: null,
-      planets: null
+      planets: null,
+      characters: null
     }
   }
 
@@ -57,11 +58,24 @@ class App extends Component {
     })
   }
 
+  fetchCharacters() {
+    return fetch("https://swapi.co/api/people/")
+    .then( res => res.json() )
+    .then ( json => {
+      this.setState({
+        characters: json.results.map(character => (
+          character
+        ))
+      })
+    })
+  }
+
   componentDidMount() {
     this.fetchPalpatine()
     this.fetchJarJar()
     this.fetchAllFilms()
     this.fetchPlanets()
+    this.fetchCharacters()
   }
 
   capitalize(str) {
@@ -75,7 +89,7 @@ class App extends Component {
   render() {
     console.log(this.state)
 
-    if(!this.state.favChar || !this.state.leastFavChar || !this.state.films || !this.state.planets) {
+    if(!this.state.favChar || !this.state.leastFavChar || !this.state.films || !this.state.planets || !this.state.characters) {
       return null
     } else {
 
@@ -87,7 +101,7 @@ class App extends Component {
             films={this.state.films}
             planets={this.state.planets}
           />
-          <CardsContainer />
+          <CardsContainer films={this.state.films} characters={this.state.characters}/>
         </div>
       );
     }
