@@ -33,7 +33,7 @@ class CardsContainer extends React.Component {
   }
 
   render() {
-    const filmCards = this.allCardInfo().map(info =>
+    const filmCards = this.allCardInfo().map((info) =>
       <FilmCard key={info.title} cardInfo={info} />
     )
 

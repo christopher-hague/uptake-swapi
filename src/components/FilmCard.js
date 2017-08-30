@@ -8,7 +8,7 @@ const FilmCard = ({cardInfo}) => {
   const promoEp4 = "https://images-na.ssl-images-amazon.com/images/I/51tYqdoRx4L.jpg"
   const promoEp5 = "https://images-na.ssl-images-amazon.com/images/I/51cv2AvxOML.jpg"
   const promoEp6 = "https://images-na.ssl-images-amazon.com/images/I/51UdiBUkerL._SY450_.jpg"
-  const promoEp7 = "https://images-na.ssl-images-amazon.com/images/I/61LEprUelSL._SL500_AC_SS350_.jpg"
+  const promoEp7 = "https://images-na.ssl-images-amazon.com/images/I/71P30QVnE3L._SY550_.jpg"
 
   const moviePosters = {
     1: promoEp1,
@@ -38,12 +38,14 @@ const FilmCard = ({cardInfo}) => {
   return (
     <div className="poster">
       <img alt={cardInfo.episode_id} src={moviePosters[cardInfo.episode_id]} />
-      <h1>Episode {romanNums[cardInfo.episode_id]}: {cardInfo.title}</h1>
-      <div>
-        <ul>
-          <li>Director: {cardInfo.director}</li>
-          <li>Main Characters: {mainChars}</li>
-        </ul>
+      <div className="poster-info">
+        <h3>Episode {romanNums[cardInfo.episode_id]}: {cardInfo.title}</h3>
+        <div>
+          <ul>
+            <li>Director: {cardInfo.director}</li>
+            <li>Main Characters: {mainChars}</li>
+          </ul>
+        </div>
       </div>
     </div>
   )

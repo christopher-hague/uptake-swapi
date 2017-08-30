@@ -29,6 +29,7 @@ body {
 
 .Film-Card {
   width: 100px;
+  flex: 1
 }
 
 .Film-Card img {
@@ -71,9 +72,14 @@ div.poster {
   border: 1px solid black;
   float: left;
   width: 180px;
+  height: px;
+}
+
+div.poster-info h3 {
+  text-align: center;
 }
 
 div.poster img {
-  width: 100%;
-  height: auto;
+  width: 178px;
+  height: 262px;
 }
