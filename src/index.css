@@ -5,7 +5,6 @@ body {
 }
 
 .Misc-Container {
-  /*border: 1px solid red;*/
   width: 25%;
   height: 670px;
   margin: 10px 10px 10px 10px;
@@ -14,14 +13,12 @@ body {
 }
 
 .Cards-Container {
-  /*border: 1px solid black;*/
   width: 75%;
   height: 670px;
   display: table-cell;
 }
 
 .Character-Container {
-  /*border: 1px solid green;*/
   height: 350px;
   width: 100%;
   transform:scale(0.9);
@@ -37,21 +34,18 @@ body {
 }
 
 .Fav-Char {
-  /*border: 1px solid red;*/
   height: 200px;
   width: 100%;
   position: relative;
 }
 
 .Least-Fav-Char {
-  /*border: 1px solid black;*/
   height: 200px;
   width: 100%;
   position: relative;
 }
 
 .Chart-Container {
-  /*border: 1px solid orange;*/
   height: 240px;
   width: 100%;
   position: relative;
@@ -69,7 +63,6 @@ body {
 
 div.poster {
   margin: 5px;
-  /*border: 1px solid black;*/
   float: left;
   width: 180px;
   height: px;
@@ -94,7 +87,6 @@ div.left-card {
 
 div.right-card {
   float: right;
-  /*position: relative;*/
   margin-left: 20px;
   margin-right: -5px;
 }

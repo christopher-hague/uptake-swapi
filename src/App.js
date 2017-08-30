@@ -82,12 +82,7 @@ class App extends Component {
     return str.charAt(0).toUpperCase() + str.slice(1)
   }
 
-  getCharHomeworld(char) {
-    return
-  }
-
   render() {
-    console.log(this.state)
 
     if(!this.state.favChar || !this.state.leastFavChar || !this.state.films || !this.state.planets || !this.state.characters) {
       return null
@@ -109,17 +104,3 @@ class App extends Component {
 }
 
 export default App;
-
-// <div className="ui grid container">
-//   <div className="four wide column">
-//     <MiscContainer
-//       favChar={this.state.favChar}
-//       leastFavChar={this.state.leastFavChar}
-//     />
-//     <div>misc other stuff</div>
-//   </div>
-//
-//   <div className="twelve wide column">
-//     <CardsContainer films={this.state.films} />
-//   </div>
-// </div>

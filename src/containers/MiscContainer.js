@@ -57,29 +57,3 @@ class MiscContainer extends React.Component {
 }
 
 export default MiscContainer
-
-// <div className="Misc-Container">
-//   <div className="Character-Container">
-//     <div className="Fav-Char">
-//       <h1>Favorite Character</h1>
-//       <h3>{palpatine.name}</h3>
-//       <ul className="char-ul">
-//         <li>Gender: {this.capitalize(palpatine.gender)}</li>
-//         <li>Homeworld: </li>
-//         <li>Films: {this.getCharFilms(palpatine)}</li>
-//       </ul>
-//     </div>
-//
-//     <div className="Least-Fav-Char">
-//       <h1>Least Favorite Character</h1>
-//       <h3>{jarJar.name}</h3>
-//       <ul className="char-ul">
-//         <li>Gender: {this.capitalize(jarJar.gender)}</li>
-//         <li>Homeworld: </li>
-//         <li>Films: {this.getCharFilms(jarJar)}</li>
-//       </ul>
-//     </div>
-//   </div>
-//   <div className="Chart-Container">
-//   </div>
-// </div>

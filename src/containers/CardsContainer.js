@@ -15,7 +15,6 @@ class CardsContainer extends React.Component {
     return this.state.characters.map(char => ({name: char.name, url: char.url}))
   }
 
-  // gets main characters from film passed
   getMainCharacters(film) {
     var mainCharactersURLs = film.characters.slice(0, 3)
     return this.state.characters.filter(char => mainCharactersURLs.includes(char.url))
@@ -42,17 +41,14 @@ class CardsContainer extends React.Component {
   }
 
   render() {
-    // pass a filmcard with information about two movies
 
-    const testFilmCards = this.makePairs().map((pair, i) =>
+    const filmCards = this.makePairs().map((pair, i) =>
       <FilmCard key={i + 1} leftCardInfo={pair[0]} rightCardInfo={pair[1]} />
     )
-    
-    console.log("filmCards: ", testFilmCards)
 
     return (
       <div className="Cards-Container">
-        {testFilmCards}
+        {filmCards}
       </div>
     )
   }
