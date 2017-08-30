@@ -2,7 +2,24 @@ import React from 'react'
 
 const FilmCard = ({cardInfo}) => {
   const promo = "https://images-na.ssl-images-amazon.com/images/I/81P3lDJbjCL._SY550_.jpg"
-  // style="float: right;"
+  const promoEp1 = "https://images-na.ssl-images-amazon.com/images/I/51o6zchqOFL._SY450_.jpg"
+  const promoEp2 = "https://images-na.ssl-images-amazon.com/images/I/51u4eDvof5L.jpg"
+  const promoEp3 = "https://images-na.ssl-images-amazon.com/images/I/51OvwcE6BdL.jpg"
+  const promoEp4 = "https://images-na.ssl-images-amazon.com/images/I/51tYqdoRx4L.jpg"
+  const promoEp5 = "https://images-na.ssl-images-amazon.com/images/I/51cv2AvxOML.jpg"
+  const promoEp6 = "https://images-na.ssl-images-amazon.com/images/I/51UdiBUkerL._SY450_.jpg"
+  const promoEp7 = "https://images-na.ssl-images-amazon.com/images/I/61LEprUelSL._SL500_AC_SS350_.jpg"
+
+  const moviePosters = {
+    1: promoEp1,
+    2: promoEp2,
+    3: promoEp3,
+    4: promoEp4,
+    5: promoEp5,
+    6: promoEp6,
+    7: promoEp7
+  }
+
 
   const mainChars = cardInfo.main_chars.map(char =>
     char.name
@@ -19,8 +36,8 @@ const FilmCard = ({cardInfo}) => {
   }
 
   return (
-    <div className="Film-Card">
-      <img alt={cardInfo.episode_id} src={promo} />
+    <div className="poster">
+      <img alt={cardInfo.episode_id} src={moviePosters[cardInfo.episode_id]} />
       <h1>Episode {romanNums[cardInfo.episode_id]}: {cardInfo.title}</h1>
       <div>
         <ul>

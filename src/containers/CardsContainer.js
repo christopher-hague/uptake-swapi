@@ -1,6 +1,5 @@
 import React from 'react'
 import FilmCard from '../components/FilmCard'
-import FilmInfo from '../components/FilmInfo'
 
 class CardsContainer extends React.Component {
   constructor(props) {
@@ -34,8 +33,6 @@ class CardsContainer extends React.Component {
   }
 
   render() {
-    console.log("CardsCont state: ",this.state)
-    console.log("AllCardInfo: ", this.allCardInfo())
     const filmCards = this.allCardInfo().map(info =>
       <FilmCard key={info.title} cardInfo={info} />
     )

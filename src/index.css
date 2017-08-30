@@ -27,13 +27,13 @@ body {
   transform:scale(0.9);
 }
 
-/*.Film-Card {
-  border: 1px solid purple;
-  height: 50%;
-  width: 50%;
-  display: inline-block;
-  vertical-align: bottom;
-}*/
+.Film-Card {
+  width: 100px;
+}
+
+.Film-Card img {
+  transform: scale(0.5)
+}
 
 .Fav-Char {
   /*border: 1px solid red;*/
@@ -64,4 +64,16 @@ body {
 
 .char-ul {
   position: absolute
+}
+
+div.poster {
+  margin: 5px;
+  border: 1px solid black;
+  float: left;
+  width: 180px;
+}
+
+div.poster img {
+  width: 100%;
+  height: auto;
 }
