@@ -99,3 +99,25 @@ div.poster img {
   width: 178px;
   height: 262px;
 }
+
+.crawl-modal {
+  /*center the h2 (opening crawls)*/
+  width: 400px;
+  height: 400px;
+}
+
+.crawl {
+  /*figure out how to get consistent crawl time*/
+  padding-top: 20px;
+  animation: crawl 70s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes crawl {
+  0% {
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% {
+    transform: rotateX(20deg) translateZ(5700px);
+  }
+}
