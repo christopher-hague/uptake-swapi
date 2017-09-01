@@ -41,8 +41,8 @@ const FilmInfo = ({cardInfo}) => {
         <h3>Episode {romanNums[cardInfo.episode_id]}: {cardInfo.title}</h3>
         <div>
           <ul>
-            <li>Director: {cardInfo.director}</li>
-            <li>Main Characters: {mainChars}</li>
+            <li>Directed by {cardInfo.director}</li>
+            <li>Featuring {mainChars}</li>
           </ul>
         </div>
       </div>

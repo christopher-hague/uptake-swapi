@@ -17,10 +17,10 @@ const FilmCard = ({leftCardInfo, rightCardInfo}) => {
   } else {
     return (
       <div className="card">
-        <div className="left-card">
+        <div className="left-card-last">
           <FilmInfo cardInfo={leftCardInfo} />
         </div>
-        <div className="right-card">
+        <div className="right-card-last">
         </div>
       </div>
     )
