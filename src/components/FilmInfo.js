@@ -24,7 +24,7 @@ const FilmInfo = ({cardInfo}) => {
     char.name
   ).join(", ")
 
-  const romanNums = {
+  var romanNums = {
     1: "I",
     2: "II",
     3: "III",

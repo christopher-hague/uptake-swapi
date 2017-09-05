@@ -13,7 +13,7 @@ const customStyles = {
   }
 };
 
-const romanNums = ["I", "II", "III", "IV", "V", "VI", "VII"]
+var romanNums = ["I", "II", "III", "IV", "V", "VI", "VII"]
 
 class CrawlStats extends React.Component {
   constructor(props) {
